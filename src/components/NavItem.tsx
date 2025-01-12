@@ -41,8 +41,7 @@ const NavItem = ({ category, handelOpen, isOpen, isAnyOpen }: NavItemProp) => {
                                             <Image
                                                 src={item.imagesrc}
                                                 alt="product img"
-                                                width={380}
-                                                height={110}
+                                                fill
                                                 className="object-center object-cover" />
                                         </div>
                                         <Link href={item.herf} className="mt-6 block font-semibold text-gray-900 ">
