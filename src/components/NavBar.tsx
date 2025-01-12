@@ -3,6 +3,7 @@ import { Icons } from "./ui/Icon"
 import { NavItems } from "./NavItems"
 import Link from "next/link"
 import { buttonVariants } from "./ui/button"
+import Cart from "./Cart"
 
 function NavBar() {
   const user = null
@@ -60,7 +61,7 @@ function NavBar() {
                   </div>}
 
                   <div className="ml-4 flow-root lg:ml-6 ">
-                    {/* <Cart /> */}
+                    <Cart /> 
                   </div>
 
                 </div>
