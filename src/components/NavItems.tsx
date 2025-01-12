@@ -5,11 +5,13 @@ import NavItem from "./NavItem"
 
 export const NavItems=()=>{
     const [activeIndex, setActiveIndex] = useState<null| Number>(null)
+    const isAnyOpen = activeIndex !== null
     return(
         <div className="flex gap-4 h-full ">
             {PRODUCT_CATEGORIES.map((category,i)=>{
+                 
 
-                const handleIndec = ()=>{
+                const handelOpen = ()=>{
                     if (activeIndex === i) {
                         setActiveIndex(null)
                     }else{
@@ -20,8 +22,14 @@ export const NavItems=()=>{
                 const isOpen = i === activeIndex
 
                 return(
-                    <NavItem />
-                )
+                    <NavItem
+                        category={category}
+                        isOpen={isOpen}
+                        handelOpen={handelOpen}
+                        key={category.value}
+                        isAnyOpen={isAnyOpen}  />
+                    
+                    ) 
             })}
         </div>
     )
